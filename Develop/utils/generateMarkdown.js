@@ -37,12 +37,49 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  let licenseSection = ''
+  if(license === 'None'){
+    licenseSection = ''
+  } else {
+    licenseSection =
+    'License: ${license}'
+  }
+  return licenseSection;
+}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(answer) {
+  return `# ${answer.title}
+  ## ${renderLicenseBadge(answer.license)} ## ${renderLicenseLink(answer.license)} 
+  ## ${renderLicenseSection(answer.license)}
 
+  ## Table of Contents
+  ### * [Installation](#installation)
+  ### * [Usage](#usage)
+  ### * [License](#License)
+  ### * [Contributors](#contributors)
+  ### * [Tests](#tests)
+  ### * [Questions](#questions)
+
+  ## Installation
+  ### You must install the following for this app to run
+  ### ${answer.installation}
+
+  ## Usage
+  ### ${answer.usage}
+
+  ## Contributors
+  ### ${answer.contributors}
+
+  ## Tests
+  ### Run the following 
+  ### ${answer.tests}
+
+  ## Installation
+  ### You must install the following for this app to run
+  ### ${answer.installation}
+  
 `;
 }
 
