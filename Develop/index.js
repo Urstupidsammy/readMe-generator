@@ -1,6 +1,9 @@
 // TODO: Include packages needed for this application
-const { default: inquirer } = require('inquirer');
+const fs = require('fs');
+const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -126,7 +129,9 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-function writeToFile = fileContent => {
+
+
+const writeToFile = fileContent => {
     return new Promise((resolve,reject) => {
         fs.writeFile('./generatedREADME.md', fileContent, err => {
             if (err) {

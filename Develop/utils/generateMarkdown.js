@@ -73,12 +73,14 @@ function generateMarkdown(answer) {
   ### ${answer.contributors}
 
   ## Tests
-  ### Run the following 
+  ### Run the following commands in your terminal to test this app
   ### ${answer.tests}
 
-  ## Installation
-  ### You must install the following for this app to run
-  ### ${answer.installation}
+  ## Questions
+  ### If you have any questions you may contact me at either
+  ### GitHub: https//github.com/${answer.contact}
+  ### or
+  ### Email: ${answer.email}
   
 `;
 }
