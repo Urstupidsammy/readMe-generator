@@ -7,7 +7,7 @@ const index = require('../index');
 // If there is no license, it will return an empty string
 function renderLicenseBadge(license) {
   let = '';
-  if(license === MIT){
+  if(license === 'MIT'){
     badge = '![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)'
   } else if (license === 'Apache 2.0') {
     badge = '![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)'
@@ -24,7 +24,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let licenseLink = '';
-  if(license === MIT) {
+  if(license === 'MIT') {
     licenseLink = 'https://choosealicense.com/licenses/mit/'
   } else if (license === 'Apache 2.0') {
     licenseLink = 'http://www.apache.org/licenses/LICENSE-2.0'
@@ -70,17 +70,19 @@ function generateMarkdown(answer) {
   ### ${answer.usage}
 
   ## Contributors
-  ### ${answer.contributors}
+  ### ${answer.contribution}
 
   ## Tests
   ### Run the following commands in your terminal to test this app
-  ### ${answer.tests}
+  ### ${answer.test}
 
   ## Questions
   ### If you have any questions you may contact me at either
-  ### GitHub: https//github.com/${answer.contact}
+  ### GitHub: [${answer.contact}](https//github.com/${answer.contact})
   ### or
   ### Email: ${answer.email}
+
+  
   
 `;
 }
